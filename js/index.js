@@ -16,7 +16,7 @@ startBtn.addEventListener("click", function(){
         statusEl.innerHTML += `<li> 25 Mins, then 5 mins break :)</li>`
     } else if (breaks = 3){
         breaks = 0
-        statusEl.innerHTML += `<li> You did 4 pomodoros!, take a 30 minutes break you deserve it :)</li>`
+        statusEl.innerHTML += `<li> 25 Mins, then 30 minutes break you deserve it! :)</li>`
     }
     // setTimeout(beep, 1000)
     beep()
