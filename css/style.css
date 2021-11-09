@@ -17,6 +17,9 @@ button{
 button:active{
     background: green;
 }
+p{
+    color: gray;
+}
 #main{
     box-sizing: border-box;
     display: grid;
@@ -33,8 +36,7 @@ button:active{
 }
 #start-btn{
     grid-area: b;
-    min-height: 50px;
-    max-height: 50px;
+    min-height: 100%;
     padding: 50px;
 
     
