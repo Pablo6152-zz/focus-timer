@@ -3,15 +3,8 @@ html, body{
     color: white;
     font-family: Poppins;
     height: 100%;
+    width: 100%;
     margin: 0;
-}
-#main{
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    height: 100%;
-
-    align-items: center;
-    justify-content: center;
 }
 button{
     background: rgb(255, 0, 0);
@@ -23,4 +16,32 @@ button{
 }
 button:active{
     background: green;
+}
+#main{
+    box-sizing: border-box;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto 25% auto;
+    grid-template-areas: 
+        "r . s"
+        "r b s"
+        "r . s";
+}
+#record-el{
+    grid-area: r;
+}
+#start-btn{
+    grid-area: b;
+    min-height: 50px;
+    max-height: 50px;
+    padding: 50px;
+
+    
+    align-items: center;
+    justify-content: center;
+}
+#status-el{
+    grid-area: s;
+    list-style: none;
 }
