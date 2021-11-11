@@ -5,20 +5,20 @@ let localLog = 0
 let breaks = 0
 
 startBtn.addEventListener("click", function(){
-    if (localLog >= 4){
-        statusEl.innerHTML = ""
-        localLog = 0
-    }
-
-    localLog += + 1
+        startBtn.textContent = "Start"
     if (breaks >= 0 && breaks <= 2){
         breaks += + 1
         statusEl.innerHTML += `<li> 25 Mins, then 5 mins break :)</li>`
-    } else if (breaks = 3){
+    } else if (breaks === 3){
+        breaks += + 1
+        statusEl.innerHTML += `<li id="fourthPomodoro"> 25 Mins, then 30 minutes break you deserve it! :)</li>`
+    } else if (breaks === 4) {
         breaks = 0
-        statusEl.innerHTML += `<li> 25 Mins, then 30 minutes break you deserve it! :)</li>`
+        startBtn.textContent = "Start again"
+        statusEl.innerHTML = ""
     }
     // setTimeout(beep, 1000)
+    console.log(breaks)
     beep()
 })
 function beep() {

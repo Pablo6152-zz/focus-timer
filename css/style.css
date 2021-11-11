@@ -3,12 +3,10 @@ html, body{
     color: white;
     font-family: Poppins;
     height: 100%;
-    width: 100%;
     margin: 0;
 }
 button{
     background: rgb(255, 0, 0);
-    padding: 30px;
     color: white;
     border: solid 5px rgb(255, 255, 255);
     border-radius: 5px;
@@ -20,15 +18,29 @@ button:active{
 p{
     color: gray;
 }
+li{
+    background-color: rgb(0, 53, 0);
+    width: 60%;
+    margin-top: 10px;
+    border: solid 5px rgb(0, 53, 0);
+    border-radius: 7px;
+}
+li:active{
+    background-color: grey;
+}
+#fourthPomodoro{
+    background-color: rgb(1, 0, 53);
+    border: solid 5px rgb(1, 0, 53);
+}
 #main{
     box-sizing: border-box;
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 200px auto 1fr;
     grid-template-rows: auto 25% auto;
     grid-template-areas: 
-        "r . s"
-        "r b s"
+        "b . s"
+        ". . s"
         "r . s";
 }
 #record-el{
@@ -36,9 +48,7 @@ p{
 }
 #start-btn{
     grid-area: b;
-    min-height: 100%;
-    padding: 50px;
-
+    height: 100%;
     
     align-items: center;
     justify-content: center;
